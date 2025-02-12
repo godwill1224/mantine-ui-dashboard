@@ -1,0 +1,12 @@
+version: "3.8"
+
+services:
+  vite-app:
+    build: .
+    ports:
+      - "3000:3000" # Mapping 3000 port on host to 3000 inside container (Vite default port)
+    container_name: vite-container
+    volumes:
+      - .:/app  # Mount your app to live-reload during development
+    environment:
+      - NODE_ENV=development # You can set environment variables here if needed
