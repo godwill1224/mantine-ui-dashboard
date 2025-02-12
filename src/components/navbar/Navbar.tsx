@@ -1,18 +1,20 @@
 import {
-  MdSportsHandball,
-  MdSportsSoccer,
-  MdAdd,
+  MdOutlineDashboard,
+  MdOutlineNewReleases,
+  MdOutlineAnalytics,
 } from "react-icons/md";
+import { FaRegNewspaper } from "react-icons/fa";
+
   import { AppShell, ScrollArea } from '@mantine/core';
   import NavbarLinksGroup from './NavbarLinksGroup';
   import UserButton from './UserButton';
   import classes from './Navbar.module.css';
   
   const mockdata = [
-    { label: 'Dashboard', icon: MdAdd, route: '/' },
+    { label: 'Dashboard', icon: MdOutlineDashboard, route: '/' },
     {
       label: 'Market news',
-      icon: MdSportsSoccer,
+      icon: FaRegNewspaper,
       initiallyOpened: true,
       links: [
         { label: 'Overview', route: '/market-overview' },
@@ -23,14 +25,14 @@ import {
     },
     {
       label: 'Releases',
-      icon: MdSportsSoccer,
+      icon: MdOutlineNewReleases,
       links: [
         { label: 'Upcoming releases', route: '/sample' },
         { label: 'Previous releases', route: '/sample' },
         { label: 'Releases schedule', route: '/sample' },
       ],
     },
-    { label: 'Analytics', icon: MdSportsHandball, route: '/home' },
+    { label: 'Analytics', icon: MdOutlineAnalytics, route: '/home' },
   ];
   
   const Navbar: React.FC = () => {

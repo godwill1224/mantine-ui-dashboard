@@ -7,10 +7,7 @@ A modern, boilerplate admin dashboard built with Mantine UI, Vite, and TypeScrip
 - **Mantine UI**: A powerful component library for building visually appealing and responsive interfaces.
 - **Vite**: A fast and optimized build tool for modern web development.
 - **TypeScript**: A statically-typed superset of JavaScript for better development experience and fewer runtime errors.
-- **Redux Toolkit**: Simplifies state management across the application.
-- **PostCSS**: Efficient CSS processing with modern features.
 - **React Router**: A robust library for managing navigation and routing between pages.
-- **Docker**: Containerization for seamless deployment and environment management.
 
 ## Prerequisites
 
@@ -172,34 +169,6 @@ For example, to start the containers in detached mode:
 
 ```bash
 make up
-```
-
----
-
-### File Structure
-
-The file structure of the project is as follows:
-
-```bash
-.
-├── public/                  # Public assets (favicon, index.html, etc.)
-├── src/                     # Source files
-│   ├── assets/              # Static assets (images, icons)
-│   ├── components/          # Reusable components (Sidebar, Navbar, etc.)
-│   ├── pages/               # Pages of the app (Dashboard, Settings, etc.)
-│   ├── store/               # Redux state management
-│   ├── styles/              # Global styles and PostCSS configurations
-│   ├── App.tsx              # Main React component
-│   ├── index.tsx            # React entry point
-│   ├── routes.tsx           # Routing setup using React Router
-│   └── utils/               # Utility functions and API helpers
-├── .eslintrc.js             # ESLint configuration
-├── Dockerfile               # Dockerfile for containerizing the app
-├── docker-compose.yml       # Docker Compose configuration
-├── Makefile                 # Makefile for managing Docker and development commands
-├── package.json             # Project dependencies and scripts
-├── tsconfig.json            # TypeScript configuration
-└── vite.config.ts           # Vite configuration
 ```
 
 ---
