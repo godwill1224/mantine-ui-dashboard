@@ -7,8 +7,8 @@ WORKDIR /app
 # Copy package.json and package-lock.json for dependency installation
 COPY package.json package-lock.json ./
 
-# Install dependencies
-RUN npm install
+# Install dependencies including devDependencies (needed for Vite)
+RUN npm install --legacy-peer-deps
 
 # Copy the entire app to the container
 COPY . .
@@ -16,5 +16,5 @@ COPY . .
 # Expose the port that Vite will run on
 EXPOSE 3000
 
-# Start the Vite dev server
-CMD ["npm", "run", "dev"]
+# Update Vite command to specify host
+CMD ["npm", "run", "dev", "--", "--host", "0.0.0.0"]
