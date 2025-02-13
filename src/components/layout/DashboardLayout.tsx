@@ -23,11 +23,9 @@ const DashboardLayout: React.FC<DashboardLayoutProps> = ({ children }) => {
 
       {/* Main Content Area */}
       <AppShell.Main className={classes.main}>
-          {children}
-          <Footer />
+        {children}
+        <Footer />
       </AppShell.Main>
-
-
     </AppShell>
   );
 };

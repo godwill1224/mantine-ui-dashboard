@@ -1,0 +1,8 @@
+.main {
+  color: light-dark(var(--mantine-color-black), var(--mantine-color-white));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+}

@@ -1,10 +1,13 @@
 import { MdChevronRight } from "react-icons/md";
 import { Avatar, Group, Text, UnstyledButton } from '@mantine/core';
+import { useNavigate } from "react-router-dom";
 import classes from './UserButton.module.css';
 
 const UserButton: React.FC = () => {
+  const navigate = useNavigate();
+
   return (
-    <UnstyledButton className={classes.user}>
+    <UnstyledButton className={classes.user}  onClick={() => navigate("/profile")}>
       <Group>
         <Avatar
           src="https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/avatars/avatar-8.png"

@@ -11,28 +11,28 @@ import { FaRegNewspaper } from "react-icons/fa";
   import classes from './Navbar.module.css';
   
   const mockdata = [
-    { label: 'Dashboard', icon: MdOutlineDashboard, route: '/' },
+    { label: 'Dashboard', icon: MdOutlineDashboard, route: '/admin' },
     {
       label: 'Market news',
       icon: FaRegNewspaper,
       initiallyOpened: true,
       links: [
-        { label: 'Overview', route: '/market-overview' },
-        { label: 'Forecasts', route: '/sample' },
-        { label: 'Outlook', route: '/sample' },
-        { label: 'Real time', route: '/sample' },
+        { label: 'Overview', route: '/admin/market-overview' },
+        { label: 'Forecasts', route: '/admin/sample' },
+        { label: 'Outlook', route: '/admin/sample' },
+        { label: 'Real time', route: '/admin/sample' },
       ],
     },
     {
       label: 'Releases',
       icon: MdOutlineNewReleases,
       links: [
-        { label: 'Upcoming releases', route: '/sample' },
-        { label: 'Previous releases', route: '/sample' },
-        { label: 'Releases schedule', route: '/sample' },
+        { label: 'Upcoming releases', route: '/admin/sample' },
+        { label: 'Previous releases', route: '/admin/sample' },
+        { label: 'Releases schedule', route: '/admin/sample' },
       ],
     },
-    { label: 'Analytics', icon: MdOutlineAnalytics, route: '/home' },
+    { label: 'Analytics', icon: MdOutlineAnalytics, route: '/admin/home' },
   ];
   
   const Navbar: React.FC = () => {

@@ -1,15 +1,13 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 import NotFound from "../pages/notFound/NotFound";
-import Dashboard from "../pages/admin/Dashboard";
-import Sample from "../pages/admin/Sample";
-import Profile from "../pages/admin/Profile";
+import AuthenticationForm from "../pages/auth/Authentication";
+import ForgotPassword from "../pages/auth/ForgotPassword";
 
-const DashboardRoutes: React.FC = () => {
+const AuthRoutes: React.FC = () => {
   const routes = [
-    { path: "/", element: <Dashboard /> },
-    { path: "/sample", element: <Sample /> },
-    { path: "/profile", element: <Profile /> },
+    { path: "/", element: <AuthenticationForm /> },
+    { path: "/forgot-password", element: <ForgotPassword /> },
 
     // Catch-all Route for 404 Not Found
     { path: "*", element: <NotFound /> },
@@ -24,4 +22,4 @@ const DashboardRoutes: React.FC = () => {
   );
 };
 
-export default DashboardRoutes;
+export default AuthRoutes;
